@@ -8,11 +8,11 @@ public class SimpleAICar : MonoBehaviour {
 	public Transform goal;
 	public Text readout;
 	
-	float acceleration = 50f;
-	float deceleration = 25f;
-	float minSpeed = 0.0f;
-	float maxSpeed = 200.0f;
-	float brakeAngle = 20.0f;
+	public float acceleration = 60f;
+	public float deceleration = 60f;
+	public float minSpeed = 0.0f;
+	public float maxSpeed = 200.0f;
+	public float brakeAngle = 20.0f;
 	float speed = 0f;
 	public float rotSpeed = 10.0f;
 
@@ -43,6 +43,8 @@ public class SimpleAICar : MonoBehaviour {
 
 		this.transform.Translate(0,0,speed*Time.deltaTime);
 		AnalogueSpeedConverter.ShowSpeed(speed, minSpeed, maxSpeed);
-		readout.text = "" + speed;
+		if(readout) {
+			readout.text = "" + speed;
+		}
 	}
 }
