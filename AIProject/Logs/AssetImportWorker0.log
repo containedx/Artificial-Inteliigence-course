@@ -1,0 +1,260 @@
+Unity Editor version:    2020.3.30f1 (1fb1bf06830e)
+Branch:                  2020.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 12.0.1 (Build 21A559)
+Darwin version:          21.1.0
+Architecture:            x86_64
+Running under Rosetta:   YES
+Available memory:        16384 MB
+Using pre-set license
+Pro License: NO
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/kingazawarty/priv_projects/Artificial-Inteliigence-course/AIProject
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50523
+Successfully changed project path to: /Users/kingazawarty/priv_projects/Artificial-Inteliigence-course/AIProject
+/Users/kingazawarty/priv_projects/Artificial-Inteliigence-course/AIProject
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 27.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.30f1 (1fb1bf06830e)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/kingazawarty/priv_projects/Artificial-Inteliigence-course/AIProject/Assets
+GfxDevice: creating device client; threaded=0
+2022-03-09 14:22:21.337 Unity[4657:437586] (null) preferred device: Apple M1 (high power)
+2022-03-09 14:22:21.337 Unity[4657:437586] Metal devices available: 1
+2022-03-09 14:22:21.337 Unity[4657:437586] 0: Apple M1 (high power)
+2022-03-09 14:22:21.338 Unity[4657:437586] Using device Apple M1 (high power)
+Initializing Metal device caps: Apple M1
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56657
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2020.3.30f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.000444 seconds.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 30.13 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.135 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1136ms)
+		BeginReloadAssembly (83ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (3ms)
+		EndReloadAssembly (947ms)
+			LoadAssemblies (80ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (165ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (480ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (30ms)
+				BeforeProcessingInitializeOnLoad (24ms)
+				ProcessInitializeOnLoadAttributes (306ms)
+				ProcessInitializeOnLoadMethodAttributes (104ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.000680 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.888 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1889ms)
+		BeginReloadAssembly (238ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (29ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (29ms)
+		EndReloadAssembly (1567ms)
+			LoadAssemblies (175ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (276ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (850ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (102ms)
+				ProcessInitializeOnLoadAttributes (705ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (28ms)
+Platform modules already initialized, skipping
+Validating Project structure ... 0.000826 seconds.
+Shader import version has changed; will reimport all shaders...
+Upgrading shader files ...0.000818 seconds.
+Application.AssetDatabase Initial Script Refresh Start
+RefreshInfo: InitialScriptRefreshV2(NoUpdateAssetOptions) scanfilter:  ... 1 filters
+RefreshProfiler: Total: 0.000ms
+Application.AssetDatabase Initial Script Refresh End
+Application.AssetDatabase.Refresh Start
+Application.AssetDatabase.Refresh End
+RefreshInfo: StopAssetImportingV2(ForceSynchronousImport) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Launching external process: /Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.03 seconds
+Initializing Unity extensions:
+2022-03-09 14:22:25.268 Unity[4657:437586] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x60000256d500 Font Asset, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+2022-03-09 14:22:25.271 Unity[4657:437586] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x60000257f8e0 Font Asset, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+========================================================================
+Worker process is ready to serve import requests
+Refreshing native plugins compatible for Editor in 0.16 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1509 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 209.6 MB.
+System memory in use after: 208.8 MB.
+
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 1983.
+Total: 2.365750 ms (FindLiveObjects: 0.068208 ms CreateObjectMapping: 0.029166 ms MarkObjects: 1.874042 ms  DeleteObjects: 0.393583 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/WaypointsRacing/gravel.jpg
+  artifactKey: Guid(7af421fe5430149309d789874a844ad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/WaypointsRacing/gravel.jpg using Guid(7af421fe5430149309d789874a844ad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ac8b819d4b2beea77e0cd5917db639c') in 0.608113 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/WaypointsRacing/red.mat
+  artifactKey: Guid(f843c55e3f83f4799b7a9b486b3fc4f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/WaypointsRacing/red.mat using Guid(f843c55e3f83f4799b7a9b486b3fc4f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '870c42cd77e3b386a4247e5c5003ce88') in 0.473444 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/WaypointsRacing/red-arrow-right-hi.png
+  artifactKey: Guid(c079df0d618384a33a1d43c19c0a1bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/WaypointsRacing/red-arrow-right-hi.png using Guid(c079df0d618384a33a1d43c19c0a1bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd66736299499fb47070193634fda28ce') in 0.412092 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/WaypointsRacing/Speedo.prefab
+  artifactKey: Guid(884b2b4b0a0a04c24ba9e49aecb6124a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/WaypointsRacing/Speedo.prefab using Guid(884b2b4b0a0a04c24ba9e49aecb6124a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c0087254df0423c581aad7d1700b9ea') in 0.084209 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/WaypointsRacing
+  artifactKey: Guid(3cfe5ca3cf302474d98df325ae1a1f05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/WaypointsRacing using Guid(3cfe5ca3cf302474d98df325ae1a1f05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa6d0372ae639d43ae18b5eea68cc5f8') in 0.000759 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/WaypointsRacing/dial.png
+  artifactKey: Guid(090b22c3e4afc4531a48618abd3e686d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/WaypointsRacing/dial.png using Guid(090b22c3e4afc4531a48618abd3e686d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d6ec2f3fec49b06ffa12d0754948482') in 0.013467 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.836771 seconds.
+  path: Assets/WaypointsRacing/RaceTrack.unity
+  artifactKey: Guid(492184229642e4d66a41d0b72fb5cba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/WaypointsRacing/RaceTrack.unity using Guid(492184229642e4d66a41d0b72fb5cba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed9a6ff135bf27256f64f6d2f3aaa9a0') in 0.001963 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002504 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+2022-03-09 14:23:17.958 Unity[4657:437586] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x6000025787e0 Font Asset, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+Mono: successfully reloaded assembly
+- Completed reload, in  1.891 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1891ms)
+		BeginReloadAssembly (207ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (28ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (55ms)
+		EndReloadAssembly (1600ms)
+			LoadAssemblies (201ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (278ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (856ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (140ms)
+				ProcessInitializeOnLoadAttributes (674ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (31ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.27 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1502 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 224.9 MB.
+System memory in use after: 225.0 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2031.
+Total: 1.861625 ms (FindLiveObjects: 0.067791 ms CreateObjectMapping: 0.028958 ms MarkObjects: 1.743792 ms  DeleteObjects: 0.020417 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 74045.586723 seconds.
+  path: Assets/WaypointsRacing/SimpleAICar.cs
+  artifactKey: Guid(80fea2eeb85bb47eead26af410458639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/WaypointsRacing/SimpleAICar.cs using Guid(80fea2eeb85bb47eead26af410458639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '375e6ec428d340da075fe8bd85016bd9') in 0.151536 seconds 
