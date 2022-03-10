@@ -7,7 +7,13 @@ public class SimpleAICar : MonoBehaviour {
 
 	public Transform goal;
 	public Text readout;
-	public float speed = 100.0f;
+	
+	float acceleration = 50f;
+	float deceleration = 25f;
+	float minSpeed = 0.0f;
+	float maxSpeed = 200.0f;
+	float brakeAngle = 20.0f;
+	float speed = 0f;
 	public float rotSpeed = 10.0f;
 
 	// Use this for initialization
@@ -26,8 +32,17 @@ public class SimpleAICar : MonoBehaviour {
 												Quaternion.LookRotation(direction), 
 												Time.deltaTime*rotSpeed);
 
+		//calculate speed 
+		if(Vector3.Angle(goal.forward, this.transform.forward) > brakeAngle){
+			speed = Mathf.Clamp(speed - (deceleration*Time.deltaTime), minSpeed, maxSpeed);
+		}
+		else{
+			speed = Mathf.Clamp(speed + (acceleration*Time.deltaTime), minSpeed, maxSpeed);
+		}
+		
+
 		this.transform.Translate(0,0,speed*Time.deltaTime);
-		AnalogueSpeedConverter.ShowSpeed(speed, 0, 100);
+		AnalogueSpeedConverter.ShowSpeed(speed, minSpeed, maxSpeed);
 		readout.text = "" + speed;
 	}
 }
