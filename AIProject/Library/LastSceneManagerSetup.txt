@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/WaypointsRacing/RaceTrack.unity
+- path: Assets/Waypoints/Waypoints.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
