@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: ScaffoldingLights
   m_Shader: {fileID: 4800000, guid: bbf40922523a2483584b1c4e6b1132ea, type: 3}
   m_ShaderKeywords: 
@@ -25,7 +26,7 @@ Material:
     m_Floats: []
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _TintColor: {r: 0.09623525, g: 0.6570747, b: 0.80597013, a: 1}
+    - _TintColor: {r: 0.17501779, g: 0.20911297, b: 0.21698111, a: 1}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6
