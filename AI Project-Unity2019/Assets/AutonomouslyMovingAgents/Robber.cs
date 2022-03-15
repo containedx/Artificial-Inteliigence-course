@@ -15,8 +15,7 @@ public class Robber : MonoBehaviour
 
     void Update()
     {
-        //Flee(target.transform.position);
-        Pursue();
+        Evade();
     }
 
 
@@ -45,5 +44,13 @@ public class Robber : MonoBehaviour
 
         float lookAhead = targetDir.magnitude/(agent.speed + target.GetComponent<Drive>().currentSpeed);
         Seek(target.transform.position + target.transform.forward * lookAhead);
+    }
+
+    void Evade()
+    {
+        Vector3 targetDir = target.transform.position - transform.position;
+        float lookAhead = targetDir.magnitude/(agent.speed + target.GetComponent<Drive>().currentSpeed);
+
+        Flee(target.transform.position + target.transform.forward * lookAhead);
     }
 }
