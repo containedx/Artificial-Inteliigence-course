@@ -15,9 +15,11 @@ public class Robber : MonoBehaviour
 
     void Update()
     {
-        Evade();
+        Wander();
     }
 
+
+    // Steering Behaviours : 
 
     void Seek(Vector3 location)
     {
@@ -52,5 +54,25 @@ public class Robber : MonoBehaviour
         float lookAhead = targetDir.magnitude/(agent.speed + target.GetComponent<Drive>().currentSpeed);
 
         Flee(target.transform.position + target.transform.forward * lookAhead);
+    }
+
+
+    Vector3 wanderTarget = Vector3.zero;
+
+    void Wander()
+    {
+        // seek around circle with bit jitter(to make it more natural) - just wandering around without goal
+        float wanderRadius = 10;
+        float wanderDistance = 10;
+        float wanderJitter = 5;
+
+        wanderTarget += new Vector3(Random.Range(-1.0f, 1.0f) * wanderJitter, 0, Random.Range(-1.0f, 1.0f) * wanderJitter);
+        wanderTarget.Normalize();
+        wanderTarget *= wanderRadius;
+
+        Vector3 targetLocalPosition = wanderTarget + new Vector3(0,0, wanderDistance);
+        Vector3 targetWorldPosition = gameObject.transform.InverseTransformVector(targetLocalPosition);
+        
+        Seek(targetWorldPosition);
     }
 }
