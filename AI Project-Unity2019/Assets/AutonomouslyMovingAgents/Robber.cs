@@ -15,7 +15,7 @@ public class Robber : MonoBehaviour
 
     void Update()
     {
-        Wander();
+        Hide();
     }
 
 
@@ -74,5 +74,28 @@ public class Robber : MonoBehaviour
         Vector3 targetWorldPosition = gameObject.transform.InverseTransformVector(targetLocalPosition);
         
         Seek(targetWorldPosition);
+    }
+
+
+    void Hide()
+    {
+        float dist = Mathf.Infinity;
+        Vector3 chosenSpot = Vector3.zero;
+
+        foreach (var spot in World.Instance.GetHidingSpots())
+        {
+            Vector3 hideDirection = spot.transform.position - target.transform.position;
+            Vector3 hidePosition = spot.transform.position + hideDirection.normalized * 5;
+
+            var distanceFromHideSpot = Vector3.Distance(transform.position, hidePosition);
+
+            if (distanceFromHideSpot < dist )
+            {
+                chosenSpot = hidePosition;
+                dist = distanceFromHideSpot;
+            }
+        }
+
+        Seek(chosenSpot);
     }
 }
