@@ -15,7 +15,8 @@ public class Robber : MonoBehaviour
 
     void Update()
     {
-        Flee(target.transform.position);
+        //Flee(target.transform.position);
+        Pursue();
     }
 
 
@@ -28,5 +29,21 @@ public class Robber : MonoBehaviour
     {
         Vector3 fleeVector = location - transform.position;
         agent.SetDestination(transform.position - fleeVector);
+    }
+
+    void Pursue()
+    {
+        Vector3 targetDir = target.transform.position - transform.position;
+
+        float relativeHeading = Vector3.Angle(transform.forward, transform.TransformVector(target.transform.forward));
+        float toTarget = Vector3.Angle(transform.forward, transform.TransformVector(targetDir));
+
+        if( (toTarget > 90 && relativeHeading < 20) || target.GetComponent<Drive>().currentSpeed < 0.01f){
+            Seek(target.transform.position);
+            return;
+        }
+
+        float lookAhead = targetDir.magnitude/(agent.speed + target.GetComponent<Drive>().currentSpeed);
+        Seek(target.transform.position + target.transform.forward * lookAhead);
     }
 }
