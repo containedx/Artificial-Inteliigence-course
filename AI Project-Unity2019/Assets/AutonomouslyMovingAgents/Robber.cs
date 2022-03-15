@@ -15,7 +15,11 @@ public class Robber : MonoBehaviour
 
     void Update()
     {
-        CleverHide();
+        if(CanSeeTarget())
+        {
+            CleverHide();
+        }
+
     }
 
 
@@ -131,5 +135,21 @@ public class Robber : MonoBehaviour
         hideCol.Raycast(backRay, out hitInfo, distance);
 
         Seek(hitInfo.point + chosenDirection.normalized);
+    }
+
+    bool CanSeeTarget()
+    {
+        // if 'cop' cant see us (cant hit us - we are behind sth), then return false. if can see us => true 
+
+        RaycastHit hitInfo;
+        Vector3 rayToTarget = target.transform.position - transform.position;
+        if (Physics.Raycast(transform.position, rayToTarget, out hitInfo))
+        {
+            if (hitInfo.transform.gameObject.tag == "cop")
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }
