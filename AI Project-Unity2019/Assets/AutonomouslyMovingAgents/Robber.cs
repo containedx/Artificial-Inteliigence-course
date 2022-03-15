@@ -15,7 +15,7 @@ public class Robber : MonoBehaviour
 
     void Update()
     {
-        Hide();
+        CleverHide();
     }
 
 
@@ -97,5 +97,39 @@ public class Robber : MonoBehaviour
         }
 
         Seek(chosenSpot);
+    }
+
+    void CleverHide() // for different size & kind objects
+    {
+        float dist = Mathf.Infinity;
+
+        Vector3 chosenSpot = Vector3.zero;
+        Vector3 chosenDirection = Vector3.zero;
+        GameObject chosenObject = World.Instance.GetHidingSpots()[0];
+
+        foreach (var spot in World.Instance.GetHidingSpots())
+        {
+            Vector3 hideDirection = spot.transform.position - target.transform.position;
+            Vector3 hidePosition = spot.transform.position + hideDirection.normalized * 100;
+
+            var distanceFromHideSpot = Vector3.Distance(transform.position, hidePosition);
+
+            if (distanceFromHideSpot < dist )
+            {
+                chosenSpot = hidePosition;
+                chosenDirection = hideDirection;
+                chosenObject = spot;
+                dist = distanceFromHideSpot;
+            }
+        }
+
+        //Go through object, then go back and try to hit it with Ray to get exact spot on the other side of object, behind target
+        Collider hideCol = chosenObject.GetComponent<Collider>();
+        Ray backRay = new Ray(chosenSpot, -chosenDirection.normalized);
+        RaycastHit hitInfo;
+        float distance = 250.0f;
+        hideCol.Raycast(backRay, out hitInfo, distance);
+
+        Seek(hitInfo.point + chosenDirection.normalized);
     }
 }
