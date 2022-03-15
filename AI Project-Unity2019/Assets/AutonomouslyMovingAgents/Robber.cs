@@ -15,12 +15,18 @@ public class Robber : MonoBehaviour
 
     void Update()
     {
-        Seek(target.transform.position);
+        Flee(target.transform.position);
     }
 
 
     void Seek(Vector3 location)
     {
         agent.SetDestination(location);
+    }
+
+    void Flee(Vector3 location)
+    {
+        Vector3 fleeVector = location - transform.position;
+        agent.SetDestination(transform.position - fleeVector);
     }
 }
