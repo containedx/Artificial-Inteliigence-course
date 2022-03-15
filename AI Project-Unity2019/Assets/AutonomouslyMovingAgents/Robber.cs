@@ -13,11 +13,17 @@ public class Robber : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
     }
 
+
     void Update()
     {
-        if(CanSeeTarget())
+        // kinda Hide and Seek ! 
+        if(CanSeeTarget() && TargetCanSeeMe())
         {
             CleverHide();
+        }
+        else
+        {
+            Pursue();
         }
 
     }
@@ -139,7 +145,7 @@ public class Robber : MonoBehaviour
 
     bool CanSeeTarget()
     {
-        // if 'cop' cant see us (cant hit us - we are behind sth), then return false. if can see us => true 
+        // if we cant see 'cop'  (cant hit - we are behind sth), then return false. if can see 'cop'  => true => start hiding
 
         RaycastHit hitInfo;
         Vector3 rayToTarget = target.transform.position - transform.position;
@@ -149,6 +155,19 @@ public class Robber : MonoBehaviour
             {
                 return true;
             }
+        }
+        return false;
+    }
+
+    bool TargetCanSeeMe()
+    {
+        //check if cop face is towards you
+        Vector3 toRobber = transform.position - target.transform.position;
+        float lookingAngle = Vector3.Angle(target.transform.forward, toRobber);
+
+        if(lookingAngle < 60)
+        {
+            return true;
         }
         return false;
     }
