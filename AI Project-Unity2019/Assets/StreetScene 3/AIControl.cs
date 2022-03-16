@@ -17,9 +17,7 @@ public class AIControl : MonoBehaviour {
 		agent = this.GetComponent<UnityEngine.AI.NavMeshAgent>();
 		animator = GetComponent<Animator>();
 
-		PickRandomGoal();
-		//trigger walking animation
-		animator.SetTrigger("isWalking");
+		SimulteCrowd();
 	}
 
 	void Update(){
@@ -27,6 +25,18 @@ public class AIControl : MonoBehaviour {
 		if (agent.remainingDistance < 1){
 			PickRandomGoal();
 		}
+	}
+
+	void SimulteCrowd(){
+		PickRandomGoal();
+		//set some offset to avoid character syncing
+		animator.SetFloat("wOffset", Random.Range(0,1));
+		//trigger walking animation
+		animator.SetTrigger("isWalking");
+		//random moving speed
+		float randomSpeed = Random.Range(0.1f, 1.8f);
+		animator.SetFloat("speedMult", randomSpeed);
+		agent.speed *= randomSpeed;
 	}
 
 	void PickRandomGoal(){
