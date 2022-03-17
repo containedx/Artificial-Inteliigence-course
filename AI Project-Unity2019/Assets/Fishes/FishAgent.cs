@@ -20,8 +20,7 @@ public class FishAgent : MonoBehaviour
     }
 
     void ApplyRules(){
-        GameObject[] neighbours;
-        neighbours = manager.fishes;
+        GameObject[] neighbours = manager.fishes;
 
         Vector3 vcentre = Vector3.zero;
         Vector3 vavoid = Vector3.zero;
@@ -48,7 +47,7 @@ public class FishAgent : MonoBehaviour
         }
 
         if(groupSize > 0){
-            vcentre = vcentre/groupSize;
+            vcentre = vcentre/groupSize + manager.goalPosition - transform.position;
             speed = gSpeed/groupSize;
 
             Vector3 direction = (vcentre + vavoid) - transform.position;

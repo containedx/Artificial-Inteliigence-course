@@ -8,6 +8,7 @@ public class FlockManager : MonoBehaviour
     public int numberOfFishes = 100;
     public GameObject[] fishes;
     public Vector3 swimLimits = new Vector3(5,5,5);
+    public Vector3 goalPosition;
 
     [Header("Fish Settings")]
     [Range(0.0f, 5.0f)]
@@ -32,6 +33,16 @@ public class FlockManager : MonoBehaviour
             fishes[i] = (GameObject) Instantiate(fishPrefab, pos, Quaternion.identity);  
             fishes[i].GetComponent<FishAgent>().manager = this; 
         }
+    }
+
+    void Update(){
+        if(Random.Range(0,100)<10) //10% chance of changing, to not change it every update
+        {
+            goalPosition = transform.position + new Vector3(Random.Range(-swimLimits.x, swimLimits.x), 
+                                                           Random.Range(-swimLimits.y, swimLimits.y), 
+                                                           Random.Range(-swimLimits.z, swimLimits.z) );
+        }
+
     }
 
 }
