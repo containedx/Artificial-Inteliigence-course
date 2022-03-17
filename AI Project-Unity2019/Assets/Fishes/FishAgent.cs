@@ -15,7 +15,11 @@ public class FishAgent : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
-        ApplyRules();
+        if(Random.Range(0,100) < 20)
+            ApplyRules();
+        if(Random.Range(0,100) < 10)
+            speed = Random.Range(manager.minSpeed, manager.maxSpeed);
+        
         MoveForward();
     }
 
