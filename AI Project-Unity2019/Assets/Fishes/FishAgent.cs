@@ -7,6 +7,8 @@ public class FishAgent : MonoBehaviour
     public FlockManager manager;
     float speed;
 
+    bool turning = false;
+
 
     // Start is called before the first frame update
     void Start(){
@@ -15,12 +17,33 @@ public class FishAgent : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
+        KeepInBounds();
+
+        if(!turning){
         if(Random.Range(0,100) < 20)
             ApplyRules();
         if(Random.Range(0,100) < 10)
             speed = Random.Range(manager.minSpeed, manager.maxSpeed);
+        }
+
         
         MoveForward();
+    }
+
+    void KeepInBounds(){
+        Bounds b = new Bounds(manager.transform.position, manager.swimLimits*2);
+
+        if(!b.Contains(transform.position)){
+            turning = true;
+        }
+        else{
+            turning = false;
+        }
+
+        if(turning){
+            Vector3 direction = manager.transform.position - transform.position;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), manager.rotationSpeed*Time.deltaTime);
+        }
     }
 
     void ApplyRules(){
