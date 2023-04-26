@@ -14,6 +14,12 @@
 ![Screen Recording (26 04 2023 21-02-35) (1)](https://user-images.githubusercontent.com/28840358/234680527-e6384aa4-f70b-4b7d-af57-2e08f7b8af22.gif)
 
 
+### [Zombie Simulation](https://github.com/containedx/Artificial-Inteliigence-course/tree/main/AI%20Project-Unity2019/Assets/NAVMESHES%20%26%20WAYPOINTS/Zombies)
+
+
+![Screen Recording (26 04 2023 21-40-32) (1)](https://user-images.githubusercontent.com/28840358/234687158-8f06ea3d-123a-435d-9311-05510b6d58f0.gif)
+
+
 ### [Hide And Seek](https://github.com/containedx/Artificial-Inteliigence-course/tree/main/AI%20Project-Unity2019/Assets/AutonomouslyMovingAgents)
 
 ![Screen Recording (26 04 2023 21-07-46)](https://user-images.githubusercontent.com/28840358/234680177-cff9c08d-ece2-4c81-b505-634beddfab11.gif)
